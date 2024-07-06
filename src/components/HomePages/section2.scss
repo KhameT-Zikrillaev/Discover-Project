@@ -1,0 +1,184 @@
+
+.border{
+    border: 1px solid #9e9e9e;
+    cursor: pointer;
+  }
+.border-flex{
+    border: 1px solid #9e9e9e;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18.5px;
+    font-weight: 600;
+    background: #FAB448;
+    color:white;
+    @media screen and (max-width:480px) {
+        font-size: 12.5px;
+   }
+   @media screen and (max-width:320px) {
+    font-size: 12.5px;
+}
+}
+  .section-2{
+    overflow: hidden;
+    padding:0px 60px;
+    position: relative;
+    display: flex;
+    gap:10px;
+    justify-content: space-between;
+    max-width: 1920px;
+    width: 100%;
+    margin:120px auto 100px auto;
+    @media screen and (max-width:992px) {
+        flex-direction: column;
+        margin-top: 50px;
+    } 
+    @media screen and (max-width:768px) {
+        padding:0px 30px;
+    }
+    @media screen and (max-width:480px) {
+        margin:30px auto;
+    }
+    &__banner{
+    position: absolute;
+    left:0;
+    @media screen and (max-width:768px) {
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+    &-left{
+        &-info{
+       
+            margin-top: 30px;
+            text-align: center;
+            &-title{
+                display: flex;
+                align-items: center;
+                gap:20px;
+                font-size: 36px;
+                @media screen and (max-width:768px) {
+                    font-size: 26px;
+                }
+                @media screen and (max-width:320px) {
+                    gap: 5px;
+                }
+                &-line{
+                   width: 40px;
+                   height: 3px;
+                   background: #FAB448;
+                }
+            }
+            span{
+                font-size: 36px;
+                font-weight: 600;
+                margin-left: 100px;
+                @media screen and (max-width:768px) {
+                    font-size: 26px;
+                }
+                @media screen and (max-width:480px) {
+                    margin-left: 50px;
+                }
+                @media screen and (max-width:320px) {
+                    margin-left: 0px;
+                }
+            }
+           }
+        &-subtitle{
+            font-size: 14px;
+            margin-top: 30px;
+            line-height:32px;
+            
+        }
+    }
+
+    &-right{
+ 
+        display: flex;
+        margin-top: 150px;
+        @media screen and (max-width:992px) {
+            flex-direction: column;
+         
+             margin-top: 50px;
+        } 
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+        
+             margin-top: 20px;
+        }
+        &-column-1{
+            width:100%;
+  
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+
+            @media screen and (max-width:1200px) {
+                grid-template-columns: repeat(1, auto);
+            }
+            @media screen and (max-width:992px) {
+                grid-template-columns: repeat(2, auto);
+            }
+            &-card{
+                width: 17rem;
+                height: 10.7rem;
+                padding:20px;
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                position: relative;
+                @media screen and (max-width:992px) {
+                    width: 100%;
+                }
+                   @media screen and (max-width:480px) {
+                        height: 6.7rem;
+                    }
+
+                    p{
+                    font-size: 3.2rem;
+                    font-weight: 600;
+                    @media screen and (max-width:480px) {
+                         font-size: 1.2rem;
+                    }
+                 
+                    }
+                    span{
+                        font-size: .95rem;
+                         @media screen and (max-width:480px) {
+                         font-size: .75rem;
+                    }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                       object-fit: cover;
+                        position: absolute;
+                        left:0;
+                        top:0;
+                        opacity: 0;
+                        transition: 0.5s;
+                        z-index: -1;
+                    }
+                    &:hover{
+                        img{
+                            opacity: 1;
+                        }
+                        p{
+                            color:#FAB448;
+                        }
+                        span{
+                            color:white;
+                        }
+                    }
+                
+            }
+        }
+        &-column-2{
+     
+            @media screen and (max-width:992px) {
+               display: flex;
+            }
+        }
+    }
+  }
